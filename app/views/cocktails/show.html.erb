@@ -14,9 +14,9 @@
       <table class="table table-bordered">
         <tbody>
           <thead>
-            <th>Ingredient</th>
-            <th>Description</th>
-            <th>Action</th>
+            <th scope="col">Ingredients (<%= @cocktail.doses.count %>)</th>
+            <th scope="col">Description</th>
+            <th scope="col">Action</th>
           </thead>
           <% @cocktail.doses.each do |dose| %>
             <tr>
