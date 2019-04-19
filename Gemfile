@@ -36,10 +36,10 @@ gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 gem 'dotenv-rails', groups: [:development, :test]
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'cloudinary', '~> 1.9.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
+gem 'carrierwave', '~> 1.2'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

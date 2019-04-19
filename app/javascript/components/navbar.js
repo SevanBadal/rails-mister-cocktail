@@ -1,7 +1,10 @@
 const initUpdateNavbarOnScroll = () => {
     console.log("In the method")
     const navbar = document.querySelector('.navbar-lewagon');
-    if (navbar) {
+    const banner = document.querySelector('.banner');
+    if (banner === null) {
+        navbar.classList.add('navbar-lewagon-white');
+    } else if (navbar) {
         window.addEventListener('scroll', () => {
             console.log("In the action")
             if (window.scrollY >= window.innerHeight) {
