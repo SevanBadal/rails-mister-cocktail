@@ -1,0 +1,25 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://source.unsplash.com/random');">
+  <div class="banner-content">
+    <h1>Let's Git Drunk</h1>
+    <p><span id="banner-typed-text"></span></p>
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary btn-lg", style: "backgroud-color: #079FB7 !important" %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row d-flex justify-content-around">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-6 col-md-3 m-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
+          <div class="card-description">
+            <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+            <%= link_to cocktail_path(cocktail), method: :delete, remote: true, data: { confirm: "Are you sure?" } do %>
+                  <i class="fa fa-trash destroy_dose"></i>
+                <% end %>
+          </div>
+        
+        </div>
+      </div>
+    <% end %>
+  </div>
+  </div>

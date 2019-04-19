@@ -18,3 +18,11 @@
 console.log('Hello World from Webpacker')
 
 import 'bootstrap';
+// import { newImg } from '../components/image';
+// newImg();
+
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+initUpdateNavbarOnScroll();
+
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();

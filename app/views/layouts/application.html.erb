@@ -7,13 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     
   </head>
 
   <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
+    <%= link_to '/', class: "navbar-brand" do %>
+    <i class="fas fa-cocktail"></i>
+      <% end %>
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary btn-lg", style: "backgroud-color: #079FB7 !important" %>
+    </div>
+
+
     <%= yield %>
 
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag "application" %> 
   </body>
 </html>

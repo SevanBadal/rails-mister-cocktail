@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-header">
+    Home
+  </div>
+  <div class="card-body">
+    <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name %>
+       
+  </div>
+   <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+</div>
